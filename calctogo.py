@@ -79,12 +79,13 @@ try:
             
     print("\n")  
 
-    print("Sorry at the moment i can just calculate with +, -, * and / ")
+    print("-" * 50)
+    print("Current Calculation Complete!")
+    print("-" * 50)
 
 except ValueError:
-    print("Please enter a valid number.")
-    
-time.sleep(1)
+    print("Error: Please enter a valid number!")
+    time.sleep(1)
 
 print("\n")
 
@@ -94,7 +95,11 @@ answer = input().lower()
 
 if answer == 'y':
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the screen
-    os.system("python3 mincalc.py")
+    # Use python or python3 depending on the system
+    if os.name == 'nt':  # Windows
+        os.system("python mincalc.py")
+    else:  # Linux/Mac
+        os.system("python3 ./mincalc.py")
 elif answer == 'n':
     time.sleep(1)
     os._exit(0)
