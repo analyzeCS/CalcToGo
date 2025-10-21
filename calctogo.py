@@ -95,11 +95,11 @@ answer = input().lower()
 
 if answer == 'y':
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the screen
-    # Use python or python3 depending on the system
+    
     if os.name == 'nt':  # Windows
-        os.system("python mincalc.py")
-    else:  # Linux/Mac
-        os.system("python3 ./mincalc.py")
+        os.system("python calctogo.py")
+    else:  # linux 
+        os.system("python3 calctogo.py")
 elif answer == 'n':
     time.sleep(1)
     os._exit(0)
